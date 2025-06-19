@@ -114,10 +114,10 @@
     }
     </script>
 </head>
-<body class="bg-apple-light-gray text-apple-dark-gray">
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-apple-light-gray min-h-screen text-apple-dark-gray">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-apple-blue text-white px-4 py-2 rounded-lg z-50">
-        跳转到主要内容
+        Skip to main content
     </a>
 
     <!-- Header -->
@@ -150,30 +150,32 @@
     <!-- Main Content -->
     <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Hero Section -->
-        <section class="text-center mb-12 animate-fade-in">
-            <h1 class="text-4xl md:text-6xl font-bold text-apple-blue mb-4 animate-slide-up" data-i18n="title">
-                Monster Survivors
-            </h1>
-            <p class="text-xl md:text-2xl text-apple-gray mb-8 max-w-3xl mx-auto animate-slide-up" data-i18n="subtitle">
-                在充满怪物的世界中生存并升级你的角色，体验刺激的生存冒险！
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-up">
-                <button class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg btn-hover-effect" onclick="startGame()" data-i18n="playNow">
-                    立即游戏
-                </button>
-                <button class="bg-apple-green text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors btn-hover-effect" onclick="scrollToFeatures()" data-i18n="learnMore">
-                    了解更多
-                </button>
+        <section class="text-center mb-12">
+            <div class="mx-auto max-w-3xl rounded-2xl bg-white/80 shadow-xl p-8 mb-8">
+                <h1 class="text-4xl md:text-6xl font-bold text-apple-blue mb-4 animate-slide-up" data-i18n="title">
+                    Monster Survivors
+                </h1>
+                <p class="text-xl md:text-2xl text-apple-gray mb-8 max-w-2xl mx-auto animate-slide-up" data-i18n="subtitle">
+                    Survive in a world full of monsters and upgrade your character in this thrilling survival adventure!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-up">
+                    <button class="bg-gradient-to-r from-apple-blue to-blue-500 text-white px-8 py-3 rounded-lg font-bold text-lg btn-hover-effect shadow-lg hover:from-blue-700 hover:to-blue-900 transition-all" onclick="startGame()" data-i18n="playNow">
+                        Play Now
+                    </button>
+                    <button class="bg-apple-green text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors btn-hover-effect shadow-md" onclick="scrollToFeatures()" data-i18n="learnMore">
+                        Learn More
+                    </button>
+                </div>
             </div>
         </section>
 
         <!-- Game Container -->
         <section class="mb-12">
-            <div class="game-frame-container max-w-4xl mx-auto">
+            <div class="game-frame-container max-w-4xl mx-auto rounded-2xl bg-white/80 shadow-xl p-4">
                 <div id="gameLoading" class="flex justify-center items-center h-64">
                     <div class="text-center">
                         <div class="loading-spinner mx-auto mb-4"></div>
-                        <p class="text-white loading-dots" data-i18n="loading">游戏加载中</p>
+                        <p class="text-2xl font-bold text-apple-blue drop-shadow-lg animate-pulse" data-i18n="loading">Loading game...</p>
                     </div>
                 </div>
                 <iframe 
@@ -190,61 +192,63 @@
 
         <!-- Game Features -->
         <section id="features" class="mb-12">
-            <h2 class="text-3xl font-bold text-center text-apple-blue mb-8" data-i18n="featuresTitle">
-                游戏特色
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="feature-card rounded-xl p-6 card-hover">
-                    <div class="text-apple-orange text-4xl mb-4">⚔️</div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="feature1Title">激烈战斗</h3>
-                    <p class="text-apple-gray" data-i18n="feature1Desc">
-                        与各种怪物进行激烈的战斗，使用不同的武器和技能来生存。
-                    </p>
-                </div>
-                <div class="feature-card rounded-xl p-6 card-hover">
-                    <div class="text-apple-green text-4xl mb-4">📈</div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="feature2Title">角色升级</h3>
-                    <p class="text-apple-gray" data-i18n="feature2Desc">
-                        通过击败怪物获得经验值，升级你的角色属性和技能。
-                    </p>
-                </div>
-                <div class="feature-card rounded-xl p-6 card-hover">
-                    <div class="text-apple-purple text-4xl mb-4">🎯</div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="feature3Title">策略生存</h3>
-                    <p class="text-apple-gray" data-i18n="feature3Desc">
-                        制定策略来应对不同的怪物组合，在危险的世界中生存下去。
-                    </p>
-                </div>
-                <div class="feature-card rounded-xl p-6 card-hover">
-                    <div class="text-apple-red text-4xl mb-4">🏆</div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="feature4Title">成就系统</h3>
-                    <p class="text-apple-gray" data-i18n="feature4Desc">
-                        完成各种挑战和成就，解锁特殊奖励和称号。
-                    </p>
-                </div>
-                <div class="feature-card rounded-xl p-6 card-hover">
-                    <div class="text-apple-blue text-4xl mb-4">🌍</div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="feature5Title">开放世界</h3>
-                    <p class="text-apple-gray" data-i18n="feature5Desc">
-                        探索广阔的开放世界，发现隐藏的宝藏和秘密区域。
-                    </p>
-                </div>
-                <div class="feature-card rounded-xl p-6 card-hover">
-                    <div class="text-apple-orange text-4xl mb-4">🎮</div>
-                    <h3 class="text-xl font-semibold mb-3" data-i18n="feature6Title">免费游戏</h3>
-                    <p class="text-apple-gray" data-i18n="feature6Desc">
-                        完全免费的游戏体验，无需下载，立即开始游戏。
-                    </p>
+            <div class="mx-auto max-w-6xl rounded-2xl bg-white/80 shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-center text-apple-blue mb-8" data-i18n="featuresTitle">
+                    Game Features
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="feature-card rounded-xl p-6 card-hover">
+                        <div class="text-apple-orange text-4xl mb-4">⚔️</div>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="feature1Title">激烈战斗</h3>
+                        <p class="text-apple-gray" data-i18n="feature1Desc">
+                            与各种怪物进行激烈的战斗，使用不同的武器和技能来生存。
+                        </p>
+                    </div>
+                    <div class="feature-card rounded-xl p-6 card-hover">
+                        <div class="text-apple-green text-4xl mb-4">📈</div>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="feature2Title">角色升级</h3>
+                        <p class="text-apple-gray" data-i18n="feature2Desc">
+                            通过击败怪物获得经验值，升级你的角色属性和技能。
+                        </p>
+                    </div>
+                    <div class="feature-card rounded-xl p-6 card-hover">
+                        <div class="text-apple-purple text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="feature3Title">策略生存</h3>
+                        <p class="text-apple-gray" data-i18n="feature3Desc">
+                            制定策略来应对不同的怪物组合，在危险的世界中生存下去。
+                        </p>
+                    </div>
+                    <div class="feature-card rounded-xl p-6 card-hover">
+                        <div class="text-apple-red text-4xl mb-4">🏆</div>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="feature4Title">成就系统</h3>
+                        <p class="text-apple-gray" data-i18n="feature4Desc">
+                            完成各种挑战和成就，解锁特殊奖励和称号。
+                        </p>
+                    </div>
+                    <div class="feature-card rounded-xl p-6 card-hover">
+                        <div class="text-apple-blue text-4xl mb-4">🌍</div>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="feature5Title">开放世界</h3>
+                        <p class="text-apple-gray" data-i18n="feature5Desc">
+                            探索广阔的开放世界，发现隐藏的宝藏和秘密区域。
+                        </p>
+                    </div>
+                    <div class="feature-card rounded-xl p-6 card-hover">
+                        <div class="text-apple-orange text-4xl mb-4">🎮</div>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="feature6Title">免费游戏</h3>
+                        <p class="text-apple-gray" data-i18n="feature6Desc">
+                            完全免费的游戏体验，无需下载，立即开始游戏。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Game Description -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center text-apple-blue mb-8" data-i18n="descriptionTitle">
-                游戏介绍
-            </h2>
-            <div class="bg-white rounded-xl p-8 shadow-lg">
+            <div class="mx-auto max-w-4xl rounded-2xl bg-white/80 shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-center text-apple-blue mb-8" data-i18n="descriptionTitle">
+                    Game Description
+                </h2>
                 <div class="prose max-w-none">
                     <p class="text-lg mb-6" data-i18n="description1">
                         Monster Survivors 是一款充满挑战性的生存冒险游戏。在这个充满危险的世界中，你将扮演一位勇敢的幸存者，面对各种可怕的怪物和挑战。
@@ -268,29 +272,31 @@
 
         <!-- System Requirements -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center text-apple-blue mb-8" data-i18n="requirementsTitle">
-                系统要求
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <h3 class="text-xl font-semibold text-apple-green mb-4" data-i18n="minimumTitle">最低配置</h3>
-                    <ul class="space-y-2 text-apple-gray">
-                        <li data-i18n="min1">• 操作系统：Windows 7 或更高版本</li>
-                        <li data-i18n="min2">• 处理器：Intel Core i3 或同等性能</li>
-                        <li data-i18n="min3">• 内存：4 GB RAM</li>
-                        <li data-i18n="min4">• 显卡：支持 WebGL 的显卡</li>
-                        <li data-i18n="min5">• 网络：稳定的互联网连接</li>
-                    </ul>
-                </div>
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <h3 class="text-xl font-semibold text-apple-orange mb-4" data-i18n="recommendedTitle">推荐配置</h3>
-                    <ul class="space-y-2 text-apple-gray">
-                        <li data-i18n="rec1">• 操作系统：Windows 10 或更高版本</li>
-                        <li data-i18n="rec2">• 处理器：Intel Core i5 或同等性能</li>
-                        <li data-i18n="rec3">• 内存：8 GB RAM</li>
-                        <li data-i18n="rec4">• 显卡：现代显卡，支持 WebGL 2.0</li>
-                        <li data-i18n="rec5">• 网络：高速互联网连接</li>
-                    </ul>
+            <div class="mx-auto max-w-4xl rounded-2xl bg-white/80 shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-center text-apple-blue mb-8" data-i18n="requirementsTitle">
+                    System Requirements
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold text-apple-green mb-4" data-i18n="minimumTitle">最低配置</h3>
+                        <ul class="space-y-2 text-apple-gray">
+                            <li data-i18n="min1">• 操作系统：Windows 7 或更高版本</li>
+                            <li data-i18n="min2">• 处理器：Intel Core i3 或同等性能</li>
+                            <li data-i18n="min3">• 内存：4 GB RAM</li>
+                            <li data-i18n="min4">• 显卡：支持 WebGL 的显卡</li>
+                            <li data-i18n="min5">• 网络：稳定的互联网连接</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold text-apple-orange mb-4" data-i18n="recommendedTitle">推荐配置</h3>
+                        <ul class="space-y-2 text-apple-gray">
+                            <li data-i18n="rec1">• 操作系统：Windows 10 或更高版本</li>
+                            <li data-i18n="rec2">• 处理器：Intel Core i5 或同等性能</li>
+                            <li data-i18n="rec3">• 内存：8 GB RAM</li>
+                            <li data-i18n="rec4">• 显卡：现代显卡，支持 WebGL 2.0</li>
+                            <li data-i18n="rec5">• 网络：高速互联网连接</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -555,13 +561,12 @@
                     closeDropdown();
                 }
             });
-            // 初始化选中项
+            // 默认语言只用英文，不检测浏览器语言
+            const defaultLang = 'en-US';
             document.addEventListener('DOMContentLoaded', function() {
-                const defaultLang = 'zh-CN';
-                let userLang = navigator.language || navigator.userLanguage;
-                if (!translations[userLang]) userLang = defaultLang;
-                const li = list.querySelector(`li[data-lang="${userLang}"]`);
-                if (li) selected.textContent = li.textContent;
+                changeLanguage(defaultLang);
+                // 语言下拉菜单高亮英文
+                document.getElementById('langDropdownSelected').textContent = document.querySelector('#langDropdownList li[data-lang="en-US"]').textContent;
             });
         })();
 
@@ -592,15 +597,8 @@
         // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', function() {
             // 设置默认语言
-            const defaultLang = 'zh-CN';
+            const defaultLang = 'en-US';
             changeLanguage(defaultLang);
-            
-            // 检测用户语言偏好
-            const userLang = navigator.language || navigator.userLanguage;
-            if (translations[userLang]) {
-                document.getElementById('languageSelect').value = userLang;
-                changeLanguage(userLang);
-            }
             
             // 添加滚动动画
             const observerOptions = {
